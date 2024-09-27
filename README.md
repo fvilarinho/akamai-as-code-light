@@ -5,18 +5,18 @@ Getting Started
 This is a demo project for education/training purposes of DevOps.
 It automates (using **Terraform**) the provisioning of a static website using the following resources in Akamai 
 Cloud Computing (former Linode) environment:
-- **Domains**: Authoritative DNS server. (Please check the file `iac/linode-dns.tf` for more details).
-- **Object Storage**: S3 compliant object storage. (Please check the files `iac/linode-objectstorage.tf` and 
-`iac/linode-objectstorage-objects.tf` for more details).
+- **Domains**: Authoritative DNS server. (Please check the file `linode-dns.tf` for more details).
+- **Object Storage**: S3 compliant object storage. (Please check the files `linode-objectstorage.tf` and 
+`linode-objectstorage-objects.tf` for more details).
 
 It also does the provisioning of the Akamai Edge resources that includes:
-- **CP Code**: Identifier used for reporting and billing of the traffic. (Please check the file`iac/akamai-cpcode.tf` 
+- **CP Code**: Identifier used for reporting and billing of the traffic. (Please check the file `akamai-cpcode.tf` 
 for more details).
 - **Edge Hostname**: Hostname that will deliver the content of the website. (Please check the file 
-`iac/akamai-edgehostname.tf` for more details).
+`akamai-edgehostname.tf` for more details).
 - **Property**: Configuration that contains the delivery rules such as: caching, redirect, performance settings, etc. 
-(Please check the file `iac/akamai-property.tf` for more details).
-All Terraform files use `variables` that are stored in the `iac/variables.tf`. 
+(Please check the file `akamai-property.tf` for more details).
+All Terraform files use `variables` that are stored in the `variables.tf`. 
 
 Please check this [link](https://developer.hashicorp.com/terraform/tutorials/configuration-language/variables) to
 to customize the variables.
