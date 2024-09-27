@@ -6,7 +6,7 @@ resource "linode_domain_record" "default" {
   domain_id   = data.linode_domain.default.id
   name        = "${var.propertyName}.${var.propertyDomain}"
   record_type = "CNAME"
-  target      = "${var.propertyName}.${var.propertyDomain}.edgesuite-staging.net"
+  target      = "${var.propertyName}.${var.propertyDomain}.edgesuite.net"
   ttl_sec     = 30
   depends_on  = [
     akamai_property_activation.staging
